@@ -3,31 +3,43 @@
 
 using namespace std;
 
-
-// void printWord(string phrase){
-
-// }
-
-
-int main()
-{
-    string phrase;
-    cout << "Enter phrase: ";
-    getline(cin,  phrase);
-
-    cout << "The phrase is: " << phrase << "\n\n";
-    
-    int count_letters = 0; // counts only the letters in the phrase
-    for (int i = 0, x = phrase.length(); i < x; i++){ //traversing over the string
+string secondCharToUpper (string phrase){
+    int count_letters = 0; // Tracks only the letters (isalpha - not spaces, numbers nor punctuation)
+    for (int i = 0, x = phrase.length(); i < x; i++){ 
         if(isalpha(phrase[i])) {
-            if (count_letters++ % 2 == 0){
+            if (count_letters++ % 2 == 0){ // If it's the second letter
                 phrase[i] = toupper(phrase[i]);
             } else {
+                // In case the letter is uppercase, convert it, without checking
                 phrase[i] = tolower(phrase[i]);
             }
         }
     }
-    cout << phrase;
+    return phrase;
+}
+
+int main()
+{
+    string userInput;
+    cout << "Enter phrase: ";
+    getline(cin,  userInput);
+
+    
+    // int count_letters = 0; // Tracks only the letters (isalpha - not spaces, numbers nor punctuation)
+    // for (int i = 0, x = phrase.length(); i < x; i++){ 
+    //     if(isalpha(phrase[i])) {
+    //         if (count_letters++ % 2 == 0){ // If it's the second letter
+    //             phrase[i] = toupper(phrase[i]);
+    //         } else {
+    //             // In case the letter is uppercase, convert it, without checking
+    //             phrase[i] = tolower(phrase[i]);
+    //         }
+    //     }
+    // }
+
+    userInput = secondCharToUpper(userInput);
+    cout << "\nThe new phrase is: ";
+    cout << userInput << "\n";
 
     return 0;
 }
