@@ -53,14 +53,12 @@ int main()
         }
     }
     if (4 == passes) {
-        cout << "All of the tests passed\n";
+        cout << "All of the tests have passed successfully.\n";
     } else if (0 < passes){
         cout << passes << " out of 4 tests passed\n";
     } else {
         cout << "Non of the tests passed\n";
     }
 
-
-    
     return 0;
 }
