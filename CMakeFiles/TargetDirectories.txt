@@ -1,0 +1,3 @@
+/home/gal/Projects/Home-Assignment/CMakeFiles/HomeAssign.dir
+/home/gal/Projects/Home-Assignment/CMakeFiles/edit_cache.dir
+/home/gal/Projects/Home-Assignment/CMakeFiles/rebuild_cache.dir
