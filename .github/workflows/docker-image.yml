@@ -1,4 +1,4 @@
-name: Docker Image CI
+name: Run Task
 
 on:
   push:
@@ -15,4 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: sudo docker build . --file Dockerfile --tag home_assign:1
+    - name: Run the Docker image
+      run: sudo docker run --rm home_assign:1
