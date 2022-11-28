@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Adding current dir to PATH
+path_to_dir=$(pwd)
+export PATH="$path_to_dir:$PATH"
+
+# Running the make file from current dir.
+make -C $path_to_dir
+
+# Running the output of the make file from output path (HomeAssign from current dir)
+HomeAssign
